@@ -54,9 +54,10 @@ user 0m0.099s
 sys 0m0.017s
 ```
 
+### Pprofile3 Test
+
 ```sh
-> p
-profile3 -f callgrind -o profile.out ./send_reminders "2020-10-29|Example|example@gmail.com"
+> pprofile3 -f callgrind -o profile.out ./send_reminders "2020-10-29|Example|example@gmail.com"
 > ls
 profile.out
 > kcachegrind profile.out
