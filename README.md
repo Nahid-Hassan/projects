@@ -36,3 +36,28 @@ Finally for run...
 ```sh
 > bash meeting_reminder.sh
 ```
+
+### Advanced Work `pprofile3` Test for Slowness of this Little Reminder Tool
+
+First we check how many times our main script send_reminders.py take.
+To check this we run,
+
+```sh
+# First we make send_reminders.py script is executable
+> chmod +x send_reminders.py
+
+# Next run `time` command with send_reminders.py script
+> time ./send_reminders "2020-10-29|Example|example@gmail.com"
+..............
+real 0m0.119s
+user 0m0.099s
+sys 0m0.017s
+```
+
+```sh
+> p
+profile3 -f callgrind -o profile.out ./send_reminders "2020-10-29|Example|example@gmail.com"
+> ls
+profile.out
+> kcachegrind profile.out
+```
