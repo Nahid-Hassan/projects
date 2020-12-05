@@ -11,7 +11,7 @@ try:
     import clipboard
 except ImportError:
     import pip
-    pip.main('install', '--user', 'clipboard')
+    pip.main(['install', '--user', 'clipboard'])
     import clipboard
 
 # set basicConfig
